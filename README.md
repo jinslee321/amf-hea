@@ -1,4 +1,4 @@
-# Git commit 확인..
+# Git commit 확인...
 
 # 시작하기
 
