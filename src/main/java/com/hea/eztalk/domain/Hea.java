@@ -13,6 +13,9 @@ public class Hea {
 	boolean active;
 	Date recentActivityDate;
 
+    // Long account;
+    Long currentBalance;
+
 	@Id @GeneratedValue
 	Long id;
 
@@ -25,6 +28,16 @@ public class Hea {
 			return false;
 		}else
 			return true;
+	}
+
+
+
+    public boolean checkAccountStatus(){
+		
+		if( currentBalance > 0 ){
+			return true;
+		}else
+			return false;
 	}
 
 
@@ -77,5 +90,17 @@ public class Hea {
 	public void setLevel(Level level) {
 		this.level = level;
 	}
+
+
+
+    public Long getCurrentBalance() {
+        return currentBalance;
+    }
+
+
+    public void setCurrentBalance(Long currentBalance) {
+        this.currentBalance = currentBalance;
+    }
+
 
 }

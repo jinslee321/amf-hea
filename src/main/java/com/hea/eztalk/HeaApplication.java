@@ -23,14 +23,16 @@ public class HeaApplication {
 
 		Repository repository = applicationContext.getBean(Repository.class);
 
+		// Hea hea = new Hea();
+		// hea.setRecentActivityDate(new Date());
+		// hea.setLevel(Level.고수);
+		// repository.save(hea);
+		// System.out.println(hea.check잠수() == false);
+
 		Hea hea = new Hea();
-		hea.setRecentActivityDate(new Date());
-		hea.setLevel(Level.고수);
-
+		hea.setCurrentBalance((long) 1000);
 		repository.save(hea);
-
-		System.out.println(hea.check잠수() == false);
-
+		System.out.println(hea.checkAccountStatus() == true);
 
 	}
 
