@@ -3,7 +3,7 @@ import java.util.Date;
 
 import javax.persistence.*;
 
-
+@Entity
 public class Hea {
     
     static long TEN_DAYS = (1000 * 60 * 60 * 24 * 10);
