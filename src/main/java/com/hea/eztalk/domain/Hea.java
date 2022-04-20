@@ -21,9 +21,7 @@ public class Hea {
 
 
 	public boolean check잠수(){
-		
 		Date today = new Date();
-
 		if(today.before( new Date(getRecentActivityDate().getTime() + TEN_DAYS) ) ){
 			return false;
 		}else
@@ -33,7 +31,9 @@ public class Hea {
 
 
     public boolean checkAccountStatus(){
-		
+		currentBalance = getCurrentBalance();
+		System.out.println("[LOG] currentBalance ::: " + currentBalance);
+
 		if( currentBalance > 0 ){
 			return true;
 		}else
@@ -42,19 +42,16 @@ public class Hea {
 
 
 
-	//////// setters / getters ///
+	//////// setters / getters ////////
 
 	public String getName() {
 		return name;
 	}
 
 
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 
 	public boolean isActive() {
@@ -98,8 +95,8 @@ public class Hea {
     }
 
 
-    public void setCurrentBalance(Long currentBalance) {
-        this.currentBalance = currentBalance;
+    public void setCurrentBalance(long l) {
+        this.currentBalance = l;
     }
 
 

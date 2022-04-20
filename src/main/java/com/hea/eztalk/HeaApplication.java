@@ -2,6 +2,7 @@ package com.hea.eztalk;
 
 import java.util.Date;
 
+import com.hea.eztalk.domain.Balance;
 import com.hea.eztalk.domain.Hea;
 import com.hea.eztalk.domain.Level;
 import com.hea.eztalk.domain.Repository;
@@ -31,8 +32,9 @@ public class HeaApplication {
 
 		Hea hea = new Hea();
 		hea.setCurrentBalance((long) 1000);
+		//hea.setCurrentBalance(Balance.max);
 		repository.save(hea);
-		System.out.println(hea.checkAccountStatus() == true);
+		System.out.println(hea.checkAccountStatus());
 
 	}
 
